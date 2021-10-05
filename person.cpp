@@ -3,11 +3,10 @@
 using namespace std;
 person::person()
 {
-    
     m_nickname="null"; 
     m_fullname="null"; 
     m_age=0; 
-    m_sex="null"; 
+    m_sex=false; 
     m_hobbies[]={"null","null","null","null","null","null","null","null","null","null"}; 
 }
 
@@ -48,3 +47,25 @@ void set_m_hobbies(string hobby)//!< Member variable "m_hobbies"
         iter++;
     }
 } 
+
+string get_m_nickname()//!< Member variable "m_nickname"
+{
+    return m_nickname;
+} 
+string get_m_fullname()//!< Member variable "m_fullname"
+{
+    return m_fullname;
+} 
+unsigned int get_m_age()//!< Member variable "m_age"
+{
+    return m_age;
+} 
+bool get_m_sex()//!< Member variable "m_sex"
+{
+    return m_sex;
+} 
+string get_m_hobbies()//!< Member variable "m_hobbies"
+{
+    return m_hobbies[];
+} 
+

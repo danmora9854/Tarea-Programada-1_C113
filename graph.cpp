@@ -20,3 +20,25 @@ bool graph::isArc( const person & src , const person & dst ) const
 
     return true;
 }
+
+    bool empty() const ///< Retorna \c "true" si el contenedor est� vac�o
+    { 
+        return m_vertex_list.empty(); 
+    } 
+
+
+    graph& operator=(const graph& other)  ///< Copia <code>*this = G</code>
+    { 
+        m_vertex_list = other.m_vertex_list; 
+        return *this; 
+        }
+    
+    
+    void clear() { m_vertex_list.clear(); } ///< Deja al grafo vac�o
+
+    bool isVertex( const person & vtx ) const;
+    void set( const person & vtx );
+    void set( const person & src , const person & dst );
+    void vertexList( vertex_list & aList ) const;
+    void vertexList( person vtx , vertex_list & aList ) const;
+    vertex_list m_vertex_list; //!< Member variable "m_vertex_list"
