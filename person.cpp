@@ -12,7 +12,7 @@ person::person()
 
 person::~person()
 {
-    //dtor
+    delete this.person;
 }
 
 void set_m_nickname(string apodo)//!< Member variable "m_nickname"
